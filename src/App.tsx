@@ -5,21 +5,21 @@ const App = () => {
   const [userId, setUserId] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [yay, setYay] = useState<string>("");
-  const [userErr,setUserErr] = useState<boolean>(false)
-  const [passwordErr,setPasswordErr] = useState<boolean>(false)
+  const [userErr, setUserErr] = useState<boolean>(false);
+  const [passwordErr, setPasswordErr] = useState<boolean>(false);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (userId === "shit" && password === "fuck"){
+    if (userId === "shit" && password === "fuck") {
       setYay("yay you did it  right");
     }
     if (userId !== "shit") {
-      setUserErr(true)
-      setUserId("")
+      setUserErr(true);
+      setUserId("");
     }
-    if(password !== "fuck") {
-      setPasswordErr(true)
-      setPassword("")
+    if (password !== "fuck") {
+      setPasswordErr(true);
+      setPassword("");
     }
     setPassword("");
     setUserId("");
@@ -31,12 +31,12 @@ const App = () => {
   return (
     <>
       <div>
-        <form onSubmit={onSubmit} >
+        <form onSubmit={onSubmit}>
           <input
             type="text"
             id="userid"
             required
-            style={{borderColor:userErr ? "red" : "initial"}}
+            style={{ borderColor: userErr ? "red" : "initial" }}
             onChange={({ target }) => setUserId(target.value)}
           />
           <br />
@@ -44,7 +44,7 @@ const App = () => {
             type="password"
             id="password"
             required
-            style={{borderColor:passwordErr ? "red" : "initial"}}
+            style={{ borderColor: passwordErr ? "red" : "initial" }}
             onChange={({ target }) => setPassword(target.value)}
           />
           <br />
