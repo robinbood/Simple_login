@@ -10,10 +10,10 @@ const App = () => {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (userId === "shit" && password === "fuck") {
+    if (userId === "fucky" && password === "fuck") {
       setYay("yay you did it  right");
     }
-    if (userId !== "shit") {
+    if (userId !== "fucky") {
       setUserErr(true);
       setUserId("");
     }
